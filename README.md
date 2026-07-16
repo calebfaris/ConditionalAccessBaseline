@@ -275,7 +275,7 @@ This policy requires MFA for all internal identities, for all cloud applications
 
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA200](./Images/CA200.png)
 
@@ -284,7 +284,7 @@ This policy requires MFA for all internal identities, for all cloud applications
 This policy blocks all internal users which have a **high risk** (user risk) status, to all cloud apps, from all platforms.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA201](./Images/CA201.png)
 
@@ -293,7 +293,7 @@ This policy blocks all internal users which have a **high risk** (user risk) sta
 This policy sets a Sign-in frequency to a maximum of 12 hours for internals, to all cloud apps, using unmanaged Windows or MacOS devices.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA202](./Images/CA202.png)
 
@@ -302,7 +302,7 @@ This policy sets a Sign-in frequency to a maximum of 12 hours for internals, to 
 This policy requires MFA for internals when enrolling their devices in Intune.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 > [!IMPORTANT]
 > Autopilot Device Preparation (v2) enrollment can fail under this policy, resulting in devices getting stuck during OOBE. This happens because the automated enrollment process is unable to fulfill the MFA requirement. To avoid this issue, add Autopilot Device Preparation users to the exclusion group for this policy.
@@ -317,7 +317,7 @@ This policy blocks unknown/unsupported device platforms for internals.
 > Currently only Windows, MacOS, Android and iOS are supported. If (for example) Linux or Windows Phone is allowed you need to modify the policy.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA204](./Images/CA204.png)
 
@@ -326,7 +326,7 @@ This policy blocks unknown/unsupported device platforms for internals.
 This policy requires internals to make use of a Windows device that is compliant or AADHJ (Azure AD Hybrid Joined / Entra ID Hybrid Joined) while accessing any cloud app.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA205](./Images/CA205.png)
 
@@ -335,7 +335,7 @@ This policy requires internals to make use of a Windows device that is compliant
 This policy prevents having persistent browser sessions for internals from unmanaged devices. Managed and compliant devices are excluded from the policy.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA206](./Images/CA206.png)
 
@@ -344,7 +344,7 @@ This policy prevents having persistent browser sessions for internals from unman
 This policy prevents internals from accessing specific apps. In this example i've blocked a random app. You should review the included and excluded apps. Excluding office 365 is not necessary if its not included. This is just an example. 
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA207](./Images/CA207.png)
 
@@ -353,7 +353,7 @@ This policy prevents internals from accessing specific apps. In this example i'v
 This policy requires MacOS devices to be compliant for internals.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA208](./Images/CA208.png)
 
@@ -362,7 +362,7 @@ This policy requires MacOS devices to be compliant for internals.
 This policy allows Microsoft Entra ID to re-evaluate a user's access to resources in near real-time, rather than waiting for the typical token expiration time (which could be up to an hour). Read the Microsoft documentation here: https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation#conditional-access-policy-evaluation-preview.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 > [!IMPORTANT]
 > This CA rule cannot be created in Report-only mode. Supported modes are **ON** or **OFF**.
@@ -374,7 +374,7 @@ This policy allows Microsoft Entra ID to re-evaluate a user's access to resource
 This policy blocks all internal users which have a **high risk** (signin risk) status, to all cloud apps, from all platforms.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-Internals**, a dynamic group that automatically includes all enabled member (non-guest) users. Add or swap in your own group if needed.
 
 ![CA210](./Images/CA210.png)
 
@@ -383,7 +383,7 @@ This policy blocks all internal users which have a **high risk** (signin risk) s
 This policy requires ServiceAccounts to use MFA, from any platform when accessing any cloud app.
 
 > [!IMPORTANT]
-> Verify the included group(s) and/or add your custom groups which have all internals in it. APP_Microsoft365_E5 is added as an example.
+> Verify the included group(s). By default this is **CA-ServiceAccounts**, which you populate with your own service accounts.
 
 ![CA300](./Images/CA300.png)
 
